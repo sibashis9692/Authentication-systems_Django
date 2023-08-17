@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+{% load static %}
+{% block body %}
+<div class="container rounded bg-white mt-5 mb-5">
+    <div class="row">
+        <div class="col-md-3 border-right">
+            <div class="d-flex flex-column align-items-center text-center p-3 py-5"><img class="rounded-circle" width="250px" height="300px" src="{% static profile_image %}"><span class="font-weight-bold">{{user_name}} ({{user_role}})</span><span class="text-black-50">{{user_email}}</span><span> </span></div>
+        </div>
+        <div class="col-md-5 border-right">
+            <div class="p-3 py-5">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <h4 class="text-right">Profile Settings</h4>
+                </div>
+                <div class="row mt-2">
+                    <div class="col-md-6"><label class="labels">Name</label><input type="text" class="form-control" placeholder="first name" value={{user_name}} disabled></div>
+                    <div class="col-md-6"><label class="labels">LastName</label><input type="text" class="form-control" placeholder="surname" value={{user_title}} disabled></div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-md-12"><label class="labels">Address Line</label><input type="text" class="form-control" placeholder="enter address line " value= {{user_line}} disabled></div>
+                    <div class="col-md-12"><label class="labels">city</label><input type="text" class="form-control" placeholder="enter city" value={{user_city}} disabled></div>
+                    <div class="col-md-12"><label class="labels">State</label><input type="text" class="form-control" placeholder="enter state" value={{user_state}} disabled></div>
+                    <div class="col-md-12"><label class="labels">pincode</label><input type="text" class="form-control" placeholder="enter pincode" value={{user_pincode}} disabled></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+    
+{% endblock %}
